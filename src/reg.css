@@ -1,4 +1,4 @@
-.container {
+.register-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,18 +8,17 @@
   flex-direction: column;
 }
 
-.card {
+.register-card {
   background: #ffffff;
   width: 608px;
-  height: 656px;
-  padding-top: 16px;
-  padding-left: 48px;
-  padding-right: 48px;
+  height: auto;
+  padding: 16px 48px;
   border-radius: 16px;
-
+  
 }
 
-.title {
+
+.register-title {
   font-size: 26px;
   margin-bottom: 24px;
   font-weight: 500;
@@ -27,28 +26,9 @@
   text-align: center;
 }
 
-.blue {
-  font-weight: bold;
-}
-
-input[type="email"],
-input[type="password"],
-input[type="text"] {
-  width: 100%;
-  height: 48px;
-  padding: 12px;
-  margin: 8px 0 12px;
-  border: 1px solid #2D60FF;
-  border-radius: 8px;
-  font-size: 15px;
-  box-sizing: border-box;
-}
-
-form {
-  width: 608px;
-}
-
-.password-wrapper {
+.register-email-wrapper,
+.register-password-wrapper,
+.register-confirm-wrapper {
   position: relative;
   margin: 25px 0 25px;
   border: 1px solid #2D60FF;
@@ -56,20 +36,24 @@ form {
   height: 48px;
 }
 
-.password-input {
+.register-email-input,
+.register-password-input,
+.register-confirm-input {
   width: 100%;
   height: 100%;
-  padding: 12px 12px 12px 12px;
-  border: none !important;   
+  padding: 12px;
+  border: none !important;
   outline: none;
   background: transparent;
   font-size: 15px;
   box-sizing: border-box;
 }
 
-.password-label {
+.register-email-label,
+.register-password-label,
+.register-confirm-label {
   position: absolute;
-  top: -10px;       
+  top: -10px;
   left: 12px;
   background: #fff;
   padding: 0 5px;
@@ -78,7 +62,7 @@ form {
   pointer-events: none;
 }
 
-.show-btn {
+.register-show-btn {
   position: absolute;
   top: 50%;
   right: 12px;
@@ -89,56 +73,13 @@ form {
   padding: 0;
 }
 
-.email-wrapper {
-  position: relative;
-  margin: 25px 0 25px;
-  border: 1px solid #2D60FF;  
-  border-radius: 8px;
-  height: 48px;
-}
-
-.email-input {
-  width: 100%;
-  height: 100%;
-  padding: 1px;
-  border: none !important;
-  outline: none;
-  background: transparent;
-  font-size: 15px;
-  box-sizing: border-box;
-}
-
-.email-label {
-  position: absolute;
-  top: -10px;       
-  left: 12px;
-  background: #fff;
-  padding: 0 5px;
-  color: #2D60FF;
-  font-size: 14px;
-  pointer-events: none;
-}
-
-.eye-icon {
+.register-eye-icon {
   width: 22px;
   height: 22px;
   opacity: 0.6;
 }
 
-.forgot {
-  display: block;
-  text-align: left;
-  font-size: 16px;
-  color: #2D60FF;
-  text-decoration: none;
-  margin-bottom: 24px;
-}
-
-.forgot:hover {
-  text-decoration: underline;
-}
-
-.login-btn {
+.register-btn {
   width: 100%;
   height: 48px;
   padding: 12px;
@@ -152,28 +93,28 @@ form {
   margin-bottom: 20px;
 }
 
-.login-btn:hover {
+.register-btn:hover {
   background: #1e47d8;
 }
 
-.register {
+.register-text {
   font-size: 16px;
   margin-bottom: 20px;
   color: #444;
   text-align: center;
 }
 
-.register a {
+.register-text a {
   color: #2D60FF;
   text-decoration: none;
   font-size: 16px;
 }
 
-.register a:hover {
+.register-text a:hover {
   text-decoration: underline;
 }
 
-.divider {
+.register-divider {
   display: flex;
   align-items: center;
   text-align: center;
@@ -182,15 +123,16 @@ form {
   font-size: 14px;
 }
 
-.divider::before,
-.divider::after {
+.register-divider::before,
+.register-divider::after {
   content: "";
   flex: 1;
   border-bottom: 1px solid #e0e0e0;
   margin: 0 10px;
 }
 
-.social-btn-fb {
+.register-social-fb,
+.register-social-google {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,63 +146,39 @@ form {
   cursor: pointer;
   margin-bottom: 12px;
   transition: 0.2s;
+  gap: 15px;
+}
+
+.register-social-fb {
   color: #3109e2;
-  gap: 15px;
 }
 
-.social-btn-google {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 46px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  background: #fff;
-  font-size: 25px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-bottom: 12px;
-  transition: 0.2s;
+.register-social-google {
   color: #e20909;
-  gap: 15px;
 }
 
-.social-btn svg {
-  margin-right: 80px;
-}
-
-.social-btn:hover {
+.register-social-fb:hover,
+.register-social-google:hover {
   background: #f7f7f7;
 }
 
-a {
-    color: #111;
-    font-size: 18px;
-}
-
-.text {
-    color: #111;
-    font-size: 16px;
-}
-
-.login-logo {
-  height: 35px;       
-  vertical-align: middle; 
+.register-logo {
+  height: 35px;
+  vertical-align: middle;
   border-radius: 6px;
-  margin: 0 6px;      
+  margin: 0 6px;
 }
 
-.eregistru {
-    font-weight: bold;
-    font-size: 26px;
+.register-eregistru {
+  font-weight: bold;
+  font-size: 26px;
 }
 
-.terms {
+.register-terms {
   font-size: 16px;
   color: #888;
   margin-top: 15px;
-  text-align: center;   
-  display: block;       
-  width: 400px;          
+  text-align: center;
+  display: block;
+  width: 400px;
 }
