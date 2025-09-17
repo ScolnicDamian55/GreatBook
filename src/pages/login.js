@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./login.css";
+import "../components/login/login.css"; 
+import logo from "../assets/logo.png"; 
+import eyeIcon from "../assets/free-icon-eye-8903984.png"; 
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,12 +19,7 @@ function Login() {
     <div className="container">
       <div className="card">
         <h2 className="title">
-          Logare pe{" "}
-          <img
-            src={require("./assets/logo.png")}
-            alt="logo"
-            className="login-logo"
-          />{" "}
+          Logare pe <img src={logo} alt="logo" className="login-logo" />{" "}
           <span className="eregistru">eRegistru</span>
         </h2>
 
@@ -54,11 +51,7 @@ function Login() {
               className="show-btn"
               onClick={() => setShowPassword(!showPassword)}
             >
-              <img
-                src={require("./assets/free-icon-eye-8903984.png")}
-                alt="Показать пароль"
-                className="eye-icon"
-              />
+              <img src={eyeIcon} alt="Показать пароль" className="eye-icon" />
             </button>
           </div>
 
@@ -80,12 +73,10 @@ function Login() {
         </div>
 
         <button className="social-btn-fb">
-          <FaFacebook />
-          <p>Continuă cu Facebook</p>
+          <FaFacebook /> <p>Continuă cu Facebook</p>
         </button>
         <button className="social-btn-google">
-          <FaGoogle />
-          <p>Continuă cu Google</p>
+          <FaGoogle /> <p>Continuă cu Google</p>
         </button>
       </div>
       <div className="terms">
