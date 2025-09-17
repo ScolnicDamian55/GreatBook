@@ -176,7 +176,6 @@ const BoldText = styled.span`
   font-size: 26px;
 `;
 
-// --- Компонент Login ---
 function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
